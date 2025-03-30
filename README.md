@@ -1,18 +1,16 @@
 //Queue using array
+
 #include<iostream>
 using namespace std;
-
 class Queue{
     int Size;
     int addCount = -1;
     int* arr = new int[Size];
-
 public:
     Queue(int x)
     {
         Size = x;
     }
-
     //add an element to last
     void adda(int value)
     {
@@ -20,7 +18,6 @@ public:
         {
             addCount++;
             arr[addCount]=value;
-
         }
         else
         {
@@ -38,7 +35,6 @@ public:
                 arr[i-1] = arr[i];
             }
             addCount--;
-
         }
         else{ cout<<"Storage empty"<<endl; addCount = -1;}
     }
@@ -51,9 +47,7 @@ public:
         }
         cout<<endl;
     }
-
 };
-
 int main()
 {
 /*
@@ -63,5 +57,4 @@ Functions to play the queue
 3. display the queue ---> class_object.adda(above_element);
 */
     Queue q1(10);
-
 }
